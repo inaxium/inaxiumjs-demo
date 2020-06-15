@@ -1,0 +1,72 @@
+<div is="x-div" x-receiver="user">
+    <ul uk-accordion>
+        <li class="uk-open">
+            <a class="uk-accordion-title" href="#"><x-lang id="28">Core Data</x-lang></a>
+            <div class="uk-accordion-content">
+                <form class="uk-grid-small" uk-grid>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="id" class="uk-form-label" is="x-label">Identification</label>
+                        <input id="id" is="x-input" class="uk-input" type="text" field disabled>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="forename" class="uk-form-label" is="x-label">Forename</label>
+                        <input id="forename" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="surname" class="uk-form-label" is="x-label">Surname</label>
+                        <input id="surname" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="country" class="uk-form-label" is="x-label">Country</label>
+                        <input id="country" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="city" class="uk-form-label" is="x-label">City</label>
+                        <input id="city" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="postcode" class="uk-form-label" is="x-label">Postcode</label>
+                        <input id="postcode" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="street" class="uk-form-label" is="x-label">Street</label>
+                        <input id="street" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="email" class="uk-form-label" is="x-label">E-Mail</label>
+                        <input id="email" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="home" class="uk-form-label" is="x-label">Homepage</label>
+                        <input id="home" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="mobile" class="uk-form-label" is="x-label">Mobile</label>
+                        <input id="mobile" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="landline" class="uk-form-label" is="x-label">Landline</label>
+                        <input id="landline" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script is="x-script">
+    import UserSite from "/sites/user/user.site.js";
+        new UserSite();
+</script>

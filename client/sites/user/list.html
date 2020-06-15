@@ -1,0 +1,23 @@
+<div cover>
+
+    <div row>
+        <div is="x-div" head>ID</div>
+        <div is="x-div" head><x-lang>Surname</x-lang></div>
+        <div is="x-div" head><x-lang>Postcode</x-lang></div>
+        <div is="x-div" head><x-lang>Street</x-lang></div>
+    </div>
+
+    <div is="x-div" x-replicator="user">
+        <div is="x-div" field="id"></div>
+        <div is="x-div" field="surname"></div>
+        <div is="x-div" field="postcode"></div>
+        <div is="x-div" field="street"></div>
+    </div>
+
+</div>
+
+
+<script is="x-script">
+    import UserList from '/sites/user/user.list.js';
+        new UserList();
+</script>

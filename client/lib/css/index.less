@@ -1,0 +1,218 @@
+@import "./uikit.theme.less";
+
+@primary-color: #A6CE39;
+@primary-color-hover: #7da030;
+@offcanvas-bar-background: #ffffff;
+
+@media (min-width: 1200px) {
+  body{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+input.uk-checkbox {
+  background-color: white;
+}
+
+input.uk-checkbox:checked {
+  background-color: @primary-color;
+}
+
+input.uk-checkbox:checked:focus {
+  background-color: @primary-color-hover;
+}
+
+li[x-display-none] {
+  display: none;
+}
+
+.x-no-display{
+  display: none;
+}
+
+li.disabled{
+  pointer-events:none;
+  opacity:0.4;
+}
+
+a{
+  color: @primary-color;
+}
+
+a:hover{
+  color: @primary-color-hover;
+}
+
+
+
+.uk-button-primary{
+  background: @primary-color;
+}
+
+.uk-button-primary:hover{
+  background: @primary-color-hover;
+}
+
+.country-dropdown{
+  overflow-y: scroll;
+  height:300px
+}
+
+.uk-card-badge{
+  background: @primary-color;
+}
+
+.uk-label{
+  background: @primary-color;
+}
+
+.uk-nav.uk-nav-default > li > a{
+  color: black!important;
+}
+
+.uk-nav.uk-nav-default > li > ul > li > a{
+  color: black!important;
+}
+
+.uk-offcanvas-bar.uk-dark.uk-offcanvas-bar-animation.uk-offcanvas-slide{
+  border-right: 1px solid @primary-color!important;
+}
+
+.left-aside-status {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 200px;
+  width: 299px;
+  background-color: #fff;
+  z-index: 1000;
+  border-top: 1px solid rgba(0,0,0,0.14);
+}
+
+
+/*nav {
+  color: #fff;
+  background-color: black;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+}*/
+
+/*#navbar-save{
+  visibility: hidden;
+}*/
+
+.brand-logo{
+  margin-left: 10px;
+}
+
+.uk-badge{
+  background: @primary-color;
+}
+
+.job-search-card{
+  background: #f8f8f8;
+  //height: 150px;
+}
+div[cover] {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+div[cover] {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+[x-name="get-new-job"]{
+  background-color: @primary-color;
+}
+
+nav[x-selected] {
+  display: none;
+}
+
+div[row], div[x-replica] {
+  display: table-row;
+}
+
+div[x-field], div[head], div[x-cell], div[field] {
+  display: table-cell;
+  padding: 1em;
+  border: #f0f0f0 1px solid;
+  width: 30px;
+}
+
+div[head] {
+  font-weight: bold;
+}
+div[head] {
+  width: 25%;
+}
+
+div[cover] > div[row]:nth-child(2){
+  display: none;
+}
+
+div[x-replicator]{
+  display: none;
+}
+
+
+div[x-selected] {
+  color: @primary-color;
+}
+
+.uk-accordion {
+  /*padding: 30px;*/
+  list-style: none;
+  width: 100%;
+}
+
+.accordion-wrapper{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.emp.permit{
+  margin-top: 30px;
+}
+
+.uk-form-label{
+  color: @primary-color;
+  font-size: small;
+}
+
+.uk-input{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  padding: 0;
+}
+
+
+.uk-input:focus{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid @primary-color;
+  padding: 0;
+}
+
+.ql-container{
+  width: 100%;
+}
+
+.x-job-label{
+  min-width: 70px;
+}
+
+.x-job-span{
+  padding-left: 10px;
+}
+
+
