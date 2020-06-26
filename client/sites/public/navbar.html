@@ -2,15 +2,15 @@
 
 <div class="uk-navbar-right">
 
-    <nav class="uk-navbar-container" uk-navbar>
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
                 <li>
                     <a is="x-a" href="#">Language</a>
-                    <div class="uk-navbar-dropdown">
+                    <div uk-dropdown="offset: -30" class="bottom-left"  onclick="UIkit.dropdown(this).hide(false);">
                         <ul class="uk-nav uk-navbar-dropdown-nav" ou="public.nav.right">
-                            <li><a id="langDE"  is="x-a" href="#">German</a></li>
-                            <li><a id="langEN"  is="x-a" href="#">English</a></li>
+                            <li><a id="langDE"  is="x-a">German</a></li>
+                            <li><a id="langEN"  is="x-a">English</a></li>
                         </ul>
                     </div>
                 </li>

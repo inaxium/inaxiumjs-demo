@@ -1,14 +1,17 @@
-import { APP, INIT } from "./lib/ijs/2.0/framework/const.js";
-import Dit, { ConfigLoader } from "./lib/ijs/2.0/framework/dit.js";
-import Url from "./lib/ijs/2.0/framework/url.js";
-import Signal, { signalEvaluation } from "./lib/ijs/2.0/framework/signal.js";
+import { APP, DATA, EMIT, INIT, URL } from "./lib/ijs/const.js";
+import Dit, { ConfigLoader } from "./lib/ijs/dit.js";
+import Url from "./lib/ijs/url.js";
+import Signal, { signalEvaluation } from "./lib/ijs/signal.js";
 import { PublicController } from "./sites/public/controller.js";
 import InitializerComponents from "./components.js";
-import DataStorage from "./lib/ijs/2.0/framework/ds.js";
-import Lang from "./lib/ijs/2.0/framework/lang.js";
+import DataStorage from "./lib/ijs/ds.js";
+import Lang from "./lib/ijs/lang.js";
+import Rest from "./lib/ijs/rest.js";
 
 const CONTENT = "DOMContentLoaded",
   USER = "user",
+  LANG = "lang",
+  COUNTRY = "country",
   PUBLIC = "public",
   ADMIN = "admin",
   DASHBOARD = "dashboard",
@@ -37,12 +40,13 @@ class InitializerDB {
   }
 
   addStores() {
-    new DataStorage().addStore(USER).finish();
+    new DataStorage().addStore(USER).addStore(COUNTRY).finish();
     return this;
   }
 
   prepareData() {
-    Lang.read(INIT);
+    Lang.read();
+    Country.read();
     return this;
   }
 }
@@ -86,11 +90,30 @@ class InitializerGui {
     Dit.entry(ds.dit.get(USER).list.entry);
   }
 
+  showLanguage() {
+    Dit.entry(ds.dit.get(LANG).list.entry);
+  }
+
   get ou() {
     return this.#ou;
   }
 
   get signal() {
     return this.#signal;
+  }
+}
+
+class Country {
+  static read() {
+    Rest.get(new Map([[URL, "/country"]]))
+      .then((resp) => {
+        ds[COUNTRY].insert(
+          new Map([
+            [DATA, resp.body],
+            [EMIT, false],
+          ])
+        );
+      })
+      .finally(() => {});
   }
 }

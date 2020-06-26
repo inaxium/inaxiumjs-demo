@@ -1,18 +1,13 @@
-<div is="x-div" x-receiver="user">
+<div is="x-div" x-receiver="user" ou="user" class="ijs-site">
     <ul uk-accordion>
         <li class="uk-open">
             <a class="uk-accordion-title" href="#"><x-lang id="28">Core Data</x-lang></a>
             <div class="uk-accordion-content">
                 <form class="uk-grid-small" uk-grid>
 
-                    <div class="uk-width-1-2@s">
+                    <div class="uk-width-1-1@s">
                         <label for="id" class="uk-form-label" is="x-label">Identification</label>
                         <input id="id" is="x-input" class="uk-input" type="text" field disabled>
-                    </div>
-
-                    <div class="uk-width-1-2@s">
-                        <label for="forename" class="uk-form-label" is="x-label">Forename</label>
-                        <input id="forename" is="x-input" class="uk-input" type="text" field>
                     </div>
 
                     <div class="uk-width-1-2@s">
@@ -21,8 +16,23 @@
                     </div>
 
                     <div class="uk-width-1-2@s">
+                        <label for="forename" class="uk-form-label" is="x-label">Forename</label>
+                        <input id="forename" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s uk-inline">
+
                         <label for="country" class="uk-form-label" is="x-label">Country</label>
-                        <input id="country" is="x-input" class="uk-input" type="text" field>
+                        <input id="country" is="x-input" class="uk-input" type="text" field readonly>
+
+                        <div uk-dropdown="mode: click" style="overflow-y: scroll; overflow-x: hidden;max-height: 200px">
+                            <ul class="uk-nav uk-dropdown-nav">
+                                <li is="x-li" x-replicator="country">
+                                    <a is="x-a" click="user.chooseCountry" field="nicename" noLang></a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
 
                     <div class="uk-width-1-2@s">
@@ -58,6 +68,16 @@
                     <div class="uk-width-1-2@s">
                         <label for="landline" class="uk-form-label" is="x-label">Landline</label>
                         <input id="landline" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="birthday" class="uk-form-label" is="x-label">Birthday</label>
+                        <input id="birthday" is="x-input" class="uk-input" type="date" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="birthday" class="uk-form-label" is="x-label">Annual Salary</label>
+                        <input id="annualSalary" is="x-input" class="uk-input" fmt field>
                     </div>
 
                 </form>

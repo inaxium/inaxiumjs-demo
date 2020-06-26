@@ -1,6 +1,6 @@
 //language=ECMAScript 6
-import { ID, OU, PAYLOAD } from "../../lib/ijs/2.0/framework/const.js";
-import List from "../../lib/ijs/2.0/framework/list.js";
+import { ID, OU, PAYLOAD } from "../../lib/ijs/const.js";
+import List from "../../lib/ijs/list.js";
 import Model from "../../model/model.js";
 
 /**
@@ -20,5 +20,7 @@ export default class UserList extends List {
     );
   }
 
-  init() {}
+  init() {
+    document.body.style.overflowY = "hidden!important";
+  }
 }

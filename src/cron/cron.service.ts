@@ -10,7 +10,7 @@ export class CronService {
 
     constructor(private service: UsersService) {}
 
-    @Cron('*/30 * * * *')
+    //@Cron('*/30 * * * *')
     initUser() {
         this.service.removeAll().then(() => {
             let fn = faker.name, fa = faker.address, fi = faker.internet, fp = faker.phone;
@@ -33,6 +33,8 @@ export class CronService {
                 user.home = fi.url();
                 user.landline = fp.phoneNumber();
                 user.mobile = fp.phoneNumber();
+                user.birthday = this.randomDate(new Date(1960, 0, 1), new Date());
+                user.annualSalary = Math.floor(Math.random() * (10000000 - 100) + 100) / 100;
 
                 this.service.create(user).then(()=>{}).catch((err)=>{console.log(err)});
             }
@@ -40,4 +42,9 @@ export class CronService {
             console.log(err);
         });
     }
+
+    randomDate(start, end) {
+        return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    }
+
 }

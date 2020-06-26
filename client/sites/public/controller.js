@@ -1,14 +1,7 @@
-import {
-  INSERT,
-  NODE,
-  UPDATE,
-  DELETE,
-} from "../../lib/ijs/2.0/framework/const.js";
-import Signal, {
-  signalEvaluation,
-} from "../../lib/ijs/2.0/framework/signal.js";
-import Dit from "../../lib/ijs/2.0/framework/dit.js";
-import Lang from "../../lib/ijs/2.0/framework/lang.js";
+import { INSERT, NODE, UPDATE, DELETE } from "../../lib/ijs/const.js";
+import Signal, { signalEvaluation } from "../../lib/ijs/signal.js";
+import Dit from "../../lib/ijs/dit.js";
+import Lang from "../../lib/ijs/lang.js";
 
 const OU = "public.controller",
   DASHBOARD = "dashboard",

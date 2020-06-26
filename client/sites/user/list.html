@@ -1,10 +1,12 @@
 <div cover>
 
-    <div row>
+    <!--div row>
         <div is="x-div" head>ID</div>
         <div is="x-div" head><x-lang>Surname</x-lang></div>
         <div is="x-div" head><x-lang>Postcode</x-lang></div>
         <div is="x-div" head><x-lang>Street</x-lang></div>
+        <div is="x-div" head><x-lang>Birthday</x-lang></div>
+        <div is="x-div" head class="text-right"><x-lang>Annual Salary</x-lang></div>
     </div>
 
     <div is="x-div" x-replicator="user">
@@ -12,7 +14,38 @@
         <div is="x-div" field="surname"></div>
         <div is="x-div" field="postcode"></div>
         <div is="x-div" field="street"></div>
+        <div is="x-div" field="birthday" date></div>
+        <div is="x-div" field="annualSalary" fmt class="text-right"></div>
+    </div-->
+
+    <div class="tableFixHead">
+        <table class="uk-table uk-table-divider">
+
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th><x-lang>Surname</x-lang></th>
+                <th><x-lang>Postcode</x-lang></th>
+                <th><x-lang>Street</x-lang></th>
+                <th><x-lang>Birthday</x-lang></th>
+                <th style="text-align: right"><x-lang>Annual Salary</x-lang></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr is="x-tr" x-replicator="user">
+                <td is="x-td" field="id"></td>
+                <td is="x-td" field="surname"></td>
+                <td is="x-td" field="postcode"></td>
+                <td is="x-td" field="street"></td>
+                <td is="x-td" field="birthday" date></td>
+                <td is="x-td" field="annualSalary" fmt style="text-align: right"></td>
+            </tr>
+            </tbody>
+
+        </table>
     </div>
+
 
 </div>
 

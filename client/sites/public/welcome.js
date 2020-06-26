@@ -1,13 +1,9 @@
 //language=ECMAScript 6
 
 /**
- * @class Welcome
+ * @class Navbar
  */
 
-export default class Welcome {
-  constructor() {
-    this.init();
-  }
-
-  init() {}
+export default class Navbar {
+  closeLangCombo() {}
 }

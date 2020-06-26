@@ -13,6 +13,16 @@ export default class Model {
       home: "",
       mobile: "",
       landline: "",
+      birthday: new Date(),
+      annualSalary: 0,
+    };
+  }
+
+  static get lang() {
+    return {
+      match: "",
+      en: "",
+      de: "",
     };
   }
 }

@@ -1,4 +1,4 @@
-import {Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
+import {Entity, Column, PrimaryGeneratedColumn, Double} from 'typeorm';
 
 @Entity()
 export class User {
@@ -34,5 +34,11 @@ export class User {
 
     @Column()
     landline: string;
+
+    @Column()
+    birthday: Date;
+
+    @Column({ name: "annual_salary", type:"double" })
+    annualSalary: Double;
 
 }

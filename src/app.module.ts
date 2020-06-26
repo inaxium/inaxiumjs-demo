@@ -7,11 +7,12 @@ import {LangModule} from "./lang/lang.module";
 import { ScheduleModule } from '@nestjs/schedule';
 import { join } from 'path';
 import { CronService } from './cron/cron.service';
+import {CountryModule} from "./country/country.module";
 
 @Module({
   imports: [ConfigModule.forRoot(),ScheduleModule.forRoot(), DatabaseModule,ServeStaticModule.forRoot({
     rootPath: join(__dirname, '..', 'client'),
-  }), UsersModule, LangModule],
+  }), UsersModule, LangModule, CountryModule],
   providers: [CronService],
 })
 export class AppModule {}
