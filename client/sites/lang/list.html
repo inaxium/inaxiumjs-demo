@@ -1,0 +1,29 @@
+<div cover>
+    <table class="uk-table uk-table-divider">
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th><x-lang>Match</x-lang></th>
+            <th><x-lang>EN</x-lang></th>
+            <th><x-lang>DE</x-lang></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr is="x-tr" x-replicator="lang">
+            <td is="x-td" field="id"></td>
+            <td is="x-td" field="match"></td>
+            <td is="x-td" field="en"></td>
+            <td is="x-td" field="de"></td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+
+
+<script is="x-script">
+    import LangList from '/sites/lang/lang.list.js';
+        new LangList();
+</script>

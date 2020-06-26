@@ -1,0 +1,37 @@
+<div is="x-div" x-receiver="lang">
+    <ul uk-accordion>
+        <li class="uk-open">
+            <a class="uk-accordion-title" href="#"><x-lang id="28">Core Data</x-lang></a>
+            <div class="uk-accordion-content">
+                <form class="uk-grid-small" uk-grid>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="id" class="uk-form-label" is="x-label">Identification</label>
+                        <input id="id" is="x-input" class="uk-input" type="text" field disabled>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="match" class="uk-form-label" is="x-label">Match</label>
+                        <input id="match" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="en" class="uk-form-label" is="x-label">EN</label>
+                        <input id="en" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                        <label for="de" class="uk-form-label" is="x-label">DE</label>
+                        <input id="de" is="x-input" class="uk-input" type="text" field>
+                    </div>
+
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script is="x-script">
+    import LangSite from "/sites/lang/lang.site.js";
+        new LangSite();
+</script>

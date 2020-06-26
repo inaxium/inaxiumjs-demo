@@ -3,7 +3,7 @@
 The backend is written in NodeJS / NestJS and actually only contains 2 remaining interfaces.
 
 
-user & long.
+user & lang.
 
 
 The underlying database is a SQLITE database with 100 test records.
