@@ -18,7 +18,7 @@
 import Signal from "./signal.js";
 import { DOC_CHANGED } from "./const.js";
 
-const LANG = "lang";
+const LANG = "language";
 
 export default class IframeDoc extends HTMLIFrameElement {
   #signal = new Signal(this);
